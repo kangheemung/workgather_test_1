@@ -5,7 +5,7 @@
 </div>
 <div class="signup">
 <span>会員登録(参加者専用)</span>
-<%= form_for :user, url: users_new_path do |f| %>
+<%= form_for :user, url: signup_create_path do |f| %>
   
     <div class="body">
         <%= f.label :User_name %>
@@ -15,7 +15,7 @@
         <%= f.label :password %><br>
         <%= f.password_field :password, :placeholder => "password" %><br>
         <%= f.label :password_confirmation %><br>
-        <%= f.text_field :password_confirmation, :placeholder => "password_confirmation"  %>
+        <%= f.password_field :password_confirmation, :placeholder => "password_confirmation"  %>
         <div class="name_box">
             <%= f.label :name %><br>
             <%= f.text_area :first_name, :placeholder => "first_name" %>
@@ -33,7 +33,7 @@
         </div>
 <% end %>
 <div class= "login">
-<span href="" >ログイン</span>
+<span href="/session/new" >ログイン</span>
 </div>
 </div>
 <footer>
