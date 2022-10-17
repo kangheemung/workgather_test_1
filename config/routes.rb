@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+ 
   get 'sessions/new'
   #top
   root 'home#top'
@@ -40,6 +41,9 @@ Rails.application.routes.draw do
   get 'planeners/:id/edit' => 'planners#edit'
   post 'planners/:id/update' => 'planners#update'
   #album
+  get 'images/index'=>'images#index',as:'images_index'
+  post'images/create'=>'images#create', as:'create_image'
+  get 'images/new'=>'images#new'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
