@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+include  UserSessionsHelper
   def index
     @users=User.all
   end
@@ -17,7 +18,7 @@ class UsersController < ApplicationController
     end
   end
   def show
-    @user=User.find_by(id: 1)
+    @user=User.find_by(1)
   end
   def login_form
   end
@@ -38,7 +39,7 @@ class UsersController < ApplicationController
   end
   private
   def user_params
-    params.require(:user).permit(:username,:email,:password,:password_confirmation,:first_name,:last_name,:birthday,:gender)
+    params.require(:user).permit(:username,:email,:password,:password_confirmation,:first_name,:last_name,:birthday,:gender,:user_id)
   end
 end
 

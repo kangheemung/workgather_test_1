@@ -1,1 +1,5 @@
-showです。
+showです
+<%= @planner.username %>
+<%= @planner.images.each do |image| %>
+  <%= image_tag image.name.url, size '200x200'%>
+<% end %>
